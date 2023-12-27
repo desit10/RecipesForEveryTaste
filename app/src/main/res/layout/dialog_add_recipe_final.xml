@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/prgressBarAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        android:elevation="5dp"
+        android:alpha="0"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/background_frame"
+            android:elevation="5dp"
+            android:clickable="false">
+
+            <LinearLayout
+                android:id="@+id/layoutRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Список ингредиентов:"
+                    android:textSize="18sp"
+                    android:textColor="@color/orange"/>
+
+                <!--       Список ингредиентов       -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ingredientsRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constrainedHeight="true"
+                        app:layout_constraintHeight_max="150dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--       Ингредиент        -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutIngredientsRecipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:hint="Ингредиент"
+                    android:textColorHint="@color/orange"
+                    app:boxStrokeColor="@color/orange"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/orange"
+                    app:errorIconTint="@color/red"
+                    app:errorTextColor="@color/red"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ingredientRecipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="100"
+                        android:textSize="14sp"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--       Описание рецепта         -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutDescriptionRecipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:hint="Описание рецепта"
+                        android:textColorHint="@color/orange"
+                        app:boxStrokeColor="@color/orange"
+                        app:boxStrokeErrorColor="@color/red"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/orange"
+                        app:errorIconTint="@color/red"
+                        app:errorTextColor="@color/red"
+                        app:hintTextColor="@color/black"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="1000"
+                        app:counterTextColor="@color/orange">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/descriptionRecipe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="100dp"
+                            android:textSize="14sp"
+                            android:maxLength="1000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp">
+
+                        <Button
+                            android:id="@+id/btnBack"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="Назад" />
+
+                        <Button
+                            android:id="@+id/btnAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.6"
+                            android:text="Добавить" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1059638857765",
+    "project_id": "recipedb2",
+    "storage_bucket": "recipedb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059638857765:android:42478573b7bd21ba746fcc",
+        "android_client_info": {
+          "package_name": "com.example.recipesforeverytaste"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHbT5mNd3ICiLIg7uMKl-n5uZDE6wYR_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clipToPadding="false"
+        android:paddingBottom="125dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:alpha="0"/>
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutAdditionalBottomMenu"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:gravity="top|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/btnRecipes"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/background_frame"
+            android:backgroundTint="@color/green"
+            android:clickable="true"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/recipeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/recipe_plus" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnVideos"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/background_frame"
+            android:backgroundTint="@color/green"
+            android:clickable="true"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/videoImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/video_player"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+        <!--<FrameLayout
+            android:id="@+id/btnRecipes"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_frame"
+            android:backgroundTint="@color/green"
+            android:clickable="true"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/favoritRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Рецепты"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="center" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnVideos"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_frame"
+            android:backgroundTint="@color/green"
+            android:clickable="true"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/favoritVideos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Видео"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="center" />
+
+        </FrameLayout>-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

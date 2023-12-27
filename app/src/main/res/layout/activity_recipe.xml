@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecipeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:transitionName="recyclerImage"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"/>
+
+        <FrameLayout
+            android:id="@+id/layoutRecipeAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/background_frame"
+            android:backgroundTint="@color/orange"
+            android:elevation="3dp"
+            android:transitionName="layoutRecipeAuthor"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerImage"
+            app:layout_constraintStart_toStartOf="@+id/recyclerImage">
+
+            <TextView
+                android:id="@+id/authorRecipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Автор рецепта"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/layoutRecipeInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:elevation="2dp"
+            android:scrollbars="none"
+            android:transitionName="layoutRecipeInfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerImage"
+            app:layout_constraintStart_toEndOf="@+id/layoutRecipeAuthor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_frame"
+                    android:elevation="3dp">
+
+                    <TextView
+                        android:id="@+id/nationalityRecipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:text="Вид блюда" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background_frame"
+                    android:elevation="3dp">
+
+                    <TextView
+                        android:id="@+id/сlassificationRecipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:text="Вид блюда" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/nameRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Название блюда"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="24sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ингредиенты"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/descriptionRecipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Описание рецепта"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.12"
+            android:paddingEnd="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/recipeHeart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/heart_resipe"
+                    android:background="@color/transparent"
+                    app:tint="@color/black"
+                    android:transitionName="recipeHeart"/>
+                <TextView
+                    android:id="@+id/recipeLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:transitionName="recipeLikes"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/recipeSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bookmark_recipe"
+                    android:background="@color/transparent"
+                    app:tint="@color/black"
+                    android:transitionName="recipeSave"/>
+                <TextView
+                    android:id="@+id/recipeFavorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:transitionName="recipeFavorites"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/recipeShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/share_recipe"
+                    android:background="@color/transparent"
+                    app:tint="@color/black"
+                    android:transitionName="recipeShare"/>
+                <TextView
+                    android:id="@+id/recipeShares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:transitionName="recipeShares"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

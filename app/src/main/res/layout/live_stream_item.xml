@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent">
+
+    <FrameLayout
+        android:id="@+id/frameRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/background_frame"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutLiveStreamData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <!--       Название блюда         -->
+            <TextView
+                android:id="@+id/nameLiveStream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Название прямого эфира"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imgUser"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_person_2_24"
+                app:tint="@color/orange"/>
+
+            <Button
+                android:id="@+id/btnOpenLiveStream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Перейти на прямой эфир"
+                android:backgroundTint="@color/orange"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
